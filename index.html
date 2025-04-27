@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=shopping_cart" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Noto Sans", serif;
+            height: 90vh;
+            color: rgb(12, 12, 122);
+        }
+
+        header {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            border-bottom: 1px solid rgba(215, 211, 211, 0.438);
+            justify-content: space-between;
+
+            >figure {
+                width: 20%;
+                height: 100%;
+                align-items: center;
+                display: flex;
+                margin-left: 30px;
+
+            }
+
+            >ul {
+                display: flex;
+                width: 40%;
+                height: 100%;
+                gap: 30px;
+                align-items: center;
+
+                >li {
+                    list-style-type: none;
+                    color: rgb(12, 12, 122);
+                    text-transform: capitalize;
+                    font-size: 20px;
+                    cursor: pointer;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            >div {
+                width: 5%;
+                height: 100%;
+                display: flex;
+
+                >span {
+                    display: flex;
+                    width: 100%;
+                    height: 90%;
+                    padding-top: 30px;
+                    color: rgb(12, 12, 122);
+                }
+            }
+        }
+
+        .box {
+            width: 95%;
+            height: 600px;
+            /* border: 1px solid red; */
+            display: flex;
+            gap: 30px;
+            margin: 50px auto 0;
+
+            >figure {
+                width: 530px;
+                height: 570px;
+                overflow: hidden;
+                margin: 0 10px 0 50px;
+
+                &:hover {
+                    >img {
+                        scale: 1.5;
+                    }
+                }
+
+                >img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    transition: .2s;
+                    pointer-events: none;
+                }
+            }
+
+            >.text {
+                width: 700px;
+                height: 90%;
+
+                >h2 {
+                    font-size: 30px;
+                    margin-bottom: 15px;
+                }
+
+                >div {
+                    display: flex;
+                    gap: 10px;
+                    margin-bottom: 50px;
+                }
+
+                >p {
+                    font-size: 18px;
+                    margin-bottom: 120px;
+                }
+
+                >div {
+                    display: flex;
+
+                    >h6 {
+                        font-size: 22px;
+                    }
+
+                    >ul {
+                        display: flex;
+                        gap: 10px;
+                        margin-left: 10px;
+
+                        >li {
+                            list-style-type: none;
+                            border: 1px solid black;
+                            height: 40px;
+                            width: fit-content;
+                            display: flex;
+                            padding: 5px;
+                            padding-top: 8px;
+                            margin-top: -5px;
+                            border-radius: 10px;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: rgb(12, 12, 122);
+                                color: white;
+                            }
+                        }
+                    }
+                }
+
+                >.color {
+                    display: flex;
+                    >h6{
+                        padding-top: 5px;
+                        margin-right: 10px;
+                    }
+
+                    >span {
+                        display: flex;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 10px;
+                        margin-top: -5px;
+                        cursor: pointer;
+
+                        &:nth-of-type(1) {
+                            background-color: rgb(72, 72, 72);
+                            margin-left: 5px;
+                        }
+
+                        &:nth-of-type(2) {
+                            background-color: rgb(73, 230, 172);
+                        }
+
+                        &:nth-of-type(3) {
+                            background-color: rgb(241, 119, 97);
+                        }
+
+                    }
+                }
+
+                >a {
+                    width: 200px;
+                    height: 50px;
+                    border-radius: 10px;
+                    background-color: rgb(12, 12, 122);
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    font-size: 18px;
+
+                    &:hover {
+                        background-color: rgb(15, 15, 95);
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <figure>
+            <img src="img/retail-logo-svg.svg" alt="">
+        </figure>
+        <ul>
+            <li>home</li>
+            <li>about</li>
+            <li>shop</li>
+            <li>blog</li>
+            <li>contact</li>
+        </ul>
+        <div>
+            <span class="material-symbols-outlined">
+                shopping_cart
+            </span>
+        </div>
+    </header>
+    <section class="box">
+        <figure id="fig">
+            <img id="img" src="img/product-5.jpg" alt="">
+        </figure>
+        <div class="text">
+            <h2>Light Floral Dress</h2>
+            <div>
+                <del>$45.00.</del>
+                <span>$30.00.</span>
+            </div>
+            <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin eget tortor risus. Praesent
+                sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla quis lorem ut libero malesuada
+                feugiat. Proin eget tortor risus.</p>
+            <div>
+                <h6>size</h6>
+                <ul>
+                    <li>Large</li>
+                    <li>Medium</li>
+                    <li>Small</li>
+                    <li>Xsmall</li>
+                </ul>
+            </div>
+            <div class="color">
+                <h6>colors</h6>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <a href="">Add to card</a>
+        </div>
+    </section>
+</body>
+<script>
+    const fig = document.querySelector('#fig')
+    const img = document.querySelector('#img')
+
+    fig.addEventListener('mousemove', (e) => {
+        let x = ((e.offsetX) * 1.5) - 375
+        let y = ((e.offsetY) * 1.5) - 375
+
+        console.log(x);
+        img.style.transform = 'translate(' + (x / 4) + 'px, ' + (y / 4) + 'px)'
+    })
+    fig.addEventListener('mouseleave', () => {
+        img.style.transform = 'translate(0,0)'
+
+    })
+</script>
+
+</html>
